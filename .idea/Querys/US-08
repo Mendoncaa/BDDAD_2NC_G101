@@ -1,0 +1,14 @@
+SELECT
+    o.idOperation AS "ID da Operação",
+    o.description AS "Descrição da Operação",
+    w.idWorkstationType AS "ID do Tipo de Estação de Trabalho",
+    w.name AS "Nome da Estação de Trabalho",
+    w.workstationCode AS "Código da Estação de Trabalho"
+FROM
+    Operation o
+LEFT JOIN
+    Operation_WorkstationType owt ON o.idOperation = owt.OperationidOperation
+LEFT JOIN
+    WorkstationType w ON owt.WorkstationTypeidWorkstationType = w.idWorkstationType
+ORDER BY
+    o.idOperation, w.idWorkstationType;
