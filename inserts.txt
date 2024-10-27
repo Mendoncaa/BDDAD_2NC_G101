@@ -23,11 +23,11 @@ INSERT INTO WorkstationType(idWorkstationType, workstationCode, name) VALUES (12
 INSERT INTO WorkstationType(idWorkstationType, workstationCode, name) VALUES (13, 'G9274', 'Glass trimming');
 
 /*ProductFamily*/
-INSERT INTO ProductFamily(idProductFamily, name) VALUES (1, 'Pro Line pots');
-INSERT INTO ProductFamily(idProductFamily, name) VALUES (2, 'La Belle pots');
-INSERT INTO ProductFamily(idProductFamily, name) VALUES (3, 'Pro Line pans');
-INSERT INTO ProductFamily(idProductFamily, name) VALUES (4, 'Pro Line lids');
-INSERT INTO ProductFamily(idProductFamily, name) VALUES (5, 'Pro Clear lids');
+INSERT INTO ProductFamily(idProductFamily, name) VALUES (125, 'Pro Line pots');
+INSERT INTO ProductFamily(idProductFamily, name) VALUES (130, 'La Belle pots');
+INSERT INTO ProductFamily(idProductFamily, name) VALUES (132, 'Pro Line pans');
+INSERT INTO ProductFamily(idProductFamily, name) VALUES (145, 'Pro Line lids');
+INSERT INTO ProductFamily(idProductFamily, name) VALUES (146, 'Pro Clear lids');
 
 /*Component*/
 INSERT INTO Component(idComponent, codeComponent, Description) VALUES (1, 'PN12344A21', 'Screw M6 35 mm');
@@ -42,24 +42,23 @@ INSERT INTO Component(idComponent, codeComponent, Description) VALUES (9, 'PN523
 INSERT INTO Component(idComponent, codeComponent, Description) VALUES (10, 'PN18324C91', 'Stainless steel handle model S26');
 
 /*Operation*/
-INSERT INTO Operation(idOperation, description) VALUES (1, 'Disc cutting');
-INSERT INTO Operation(idOperation, description) VALUES (2, 'Initial pot base pressing');
-INSERT INTO Operation(idOperation, description) VALUES (3, 'Final pot base pressing');
-INSERT INTO Operation(idOperation, description) VALUES (4, 'Pot base finishing');
-INSERT INTO Operation(idOperation, description) VALUES (5, 'Lid pressing');
-INSERT INTO Operation(idOperation, description) VALUES (6, 'Lid finishing');
-INSERT INTO Operation(idOperation, description) VALUES (7, 'Pot handles riveting');
-INSERT INTO Operation(idOperation, description) VALUES (8, 'Lid handle screw');
-INSERT INTO Operation(idOperation, description) VALUES (9, 'Pot test and packaging');
-INSERT INTO Operation(idOperation, description) VALUES (10, 'Handle welding');
-INSERT INTO Operation(idOperation, description) VALUES (11, 'Lid polishing');
-INSERT INTO Operation(idOperation, description) VALUES (12, 'Pot base polishing');
-INSERT INTO Operation(idOperation, description) VALUES (13, 'Teflon painting');
-INSERT INTO Operation(idOperation, description) VALUES (14, 'Initial pan base pressing');
-INSERT INTO Operation(idOperation, description) VALUES (15, 'Final pan base pressing');
-INSERT INTO Operation(idOperation, description) VALUES (16, 'Pan base finishing');
-INSERT INTO Operation(idOperation, description) VALUES (17, 'Handle welding');
-INSERT INTO Operation(idOperation, description) VALUES (18, 'Pan test and packaging');
+INSERT INTO Operation(idOperation, description) VALUES (5647, 'Disc cutting');
+INSERT INTO Operation(idOperation, description) VALUES (5649, 'Initial pot base pressing');
+INSERT INTO Operation(idOperation, description) VALUES (5651, 'Final pot base pressing');
+INSERT INTO Operation(idOperation, description) VALUES (5653, 'Pot base finishing');
+INSERT INTO Operation(idOperation, description) VALUES (5655, 'Lid pressing');
+INSERT INTO Operation(idOperation, description) VALUES (5657, 'Lid finishing');
+INSERT INTO Operation(idOperation, description) VALUES (5659, 'Pot handles riveting');
+INSERT INTO Operation(idOperation, description) VALUES (5661, 'Lid handle screw');
+INSERT INTO Operation(idOperation, description) VALUES (5663, 'Pot test and packaging');
+INSERT INTO Operation(idOperation, description) VALUES (5665, 'Handle welding');
+INSERT INTO Operation(idOperation, description) VALUES (5667, 'Lid polishing');
+INSERT INTO Operation(idOperation, description) VALUES (5669, 'Pot base polishing');
+INSERT INTO Operation(idOperation, description) VALUES (5671, 'Teflon painting');
+INSERT INTO Operation(idOperation, description) VALUES (5681, 'Initial pan base pressing');
+INSERT INTO Operation(idOperation, description) VALUES (5682, 'Final pan base pressing');
+INSERT INTO Operation(idOperation, description) VALUES (5683, 'Pan base finishing');
+INSERT INTO Operation(idOperation, description) VALUES (5688, 'Pan test and packaging');
 
 /*Order*/
 INSERT INTO "Order"(idOrder, deliveryDate, orderDate, CustomeridCustomer) VALUES (1, TO_DATE('23-09-2024', 'DD-MM-YYYY'), TO_DATE('15-09-2024', 'DD-MM-YYYY'), 785);
@@ -72,39 +71,38 @@ INSERT INTO "Order"(idOrder, deliveryDate, orderDate, CustomeridCustomer) VALUES
 
 
 /*Operation_WorkstationType*/
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (1, 1);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (2, 2);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (3, 2);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (4, 7);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5, 2);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (6, 7);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (7, 4);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (8, 11);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (9, 5);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (10, 8);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (11, 10);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (12, 10);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (13, 9);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (14, 2);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (15, 2);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (16, 7);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (17, 8);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (18, 5);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (1, 2);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (2, 3);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5, 3);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (14, 3);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (15, 3);
-INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (1, 3);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5647, 1);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5649, 2);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5651, 2);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5653, 7);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5655, 2);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5657, 7);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5659, 4);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5661, 11);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5663, 5);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5665, 8);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5667, 10);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5669, 10);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5671, 9);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5681, 2);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5682, 2);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5683, 7);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5688, 5);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5647, 2);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5649, 3);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5655, 3);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5681, 3);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5682, 3);
+INSERT INTO Operation_WorkstationType(OperationidOperation, WorkstationTypeidWorkstationType) VALUES (5647, 3);
 
 /*Product*/
-INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (1, 'AS12945T22', 'La Belle 22 5l pot', '5l 22 cm aluminium and teflon non stick pot', 2);
-INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (2, 'AS12945S22', 'Pro 22 5l pot', '5l 22 cm stainless steel pot', 1);
-INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (3, 'AS12945S20', 'Pro 20 3l pot', '3l 20 cm stainless steel pot', 1);
-INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (4, 'AS12945S17', 'Pro 17 2l pot', '2l 17 cm stainless steel pot', 1);
-INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (5, 'AS12945P17', 'Pro 17 2l sauce pan', '2l 17 cm stainless steel souce pan', 3);
-INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (6, 'AS12945S48', 'Pro 17 lid', '17 cm stainless steel lid', 4);
-INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (7, 'AS12945G48', 'Pro Clear 17 lid', '17 cm glass lid', 5);
+INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (1, 'AS12945T22', 'La Belle 22 5l pot', '5l 22 cm aluminium and teflon non stick pot', 130);
+INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (2, 'AS12945S22', 'Pro 22 5l pot', '5l 22 cm stainless steel pot', 125);
+INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (3, 'AS12945S20', 'Pro 20 3l pot', '3l 20 cm stainless steel pot', 125);
+INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (4, 'AS12945S17', 'Pro 17 2l pot', '2l 17 cm stainless steel pot', 125);
+INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (5, 'AS12945P17', 'Pro 17 2l sauce pan', '2l 17 cm stainless steel souce pan', 132);
+INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (6, 'AS12945S48', 'Pro 17 lid', '17 cm stainless steel lid', 145);
+INSERT INTO Product(idProduct, productCode, name, description, ProductFamilyidProductFamily) VALUES (7, 'AS12945G48', 'Pro Clear 17 lid', '17 cm glass lid', 146);
 
 /*Order_Product*/
 INSERT INTO Order_Product(OrderidOrder, ProductidProduct, quantity) VALUES (1, 2, 5);
@@ -150,5 +148,25 @@ INSERT INTO BOM_Component(BOMidBOM, ComponentidComponent, quantity, ProductidPro
 INSERT INTO BOM_Component(BOMidBOM, ComponentidComponent, quantity, ProductidProduct) VALUES (4, 10, 1, 5);
 
 /*BOO*/
-INSERT INTO BOO(IdBOO, ProductFamilyidProductFamily) VALUES (1, 1);
-INSERT INTO BOO(IdBOO, ProductFamilyidProductFamily) VALUES (2, 3);
+INSERT INTO BOO(IdBOO, ProductFamilyidProductFamily) VALUES (1, 125);
+INSERT INTO BOO(IdBOO, ProductFamilyidProductFamily) VALUES (2, 132);
+
+/*BOO_OPERATION*/
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (1, 5647, 1);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (1, 5647, 2);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (1, 5649, 3);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (1, 5651, 4);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (1, 5653, 5);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (1, 5659, 6);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (1, 5669, 7);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (1, 5655, 8);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (1, 5657, 9);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (1, 5661, 10);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (1, 5667, 11);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (1, 5663, 12);
+
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (2, 5681, 1);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (2, 5682, 2);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (2, 5683, 3);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (2, 5665, 4);
+INSERT INTO BOO_Operation (BOOIdBOO, OperationidOperation, operationSequence) VALUES (2, 5688, 5);
